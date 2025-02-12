@@ -7,7 +7,7 @@ class LogAnalyzer:
         self.log_folder = log_folder
 
     def read_my_log(self,folderName,logNum):
-        os.chdir("C:\\Users\\stefa\\AppData\\Local\\Programs\\Python\\Python312")
+        os.chdir("your path to folder with relevant logs")
         folder = Path(folderName)
         all_logs = list(folder.glob('access_*.log'))
         num = str(logNum)
