@@ -1,4 +1,4 @@
-## Stefan West || init 9/28/2026 || LogAnalyzer v1.0 ##
+## Stefan West || init 9/28/2026 || LogAnalyzer v2.0 ##
 ## Analyzes JSONL web logs into counts, statistics, and evidence-based signals. ##
 ## Log 1: baseline; Log 2: ddos; Log 3: idor; Log 4: password spraying; Log 5: mixed ##
 
