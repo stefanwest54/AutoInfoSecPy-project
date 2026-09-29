@@ -19,8 +19,8 @@ AutoInfoSecPy-project/
 `-- LogCrawler/
     |-- README.md
     |-- Main/
-    |   |-- LogAnalyzer_v1.py
-    |   `-- LogCrawler_v1.py
+    |   |-- LogAnalyzer_v2.py
+    |   `-- LogCrawler_v2.py
     `-- Logs/
         `-- new_logs/          # Sanitized sample logs; operational logs should stay local
 ```
@@ -34,13 +34,13 @@ Requirements: Python 3. No third-party packages are required.
 From PowerShell at the repository root:
 
 ```powershell
-py .\LogCrawler\Main\LogCrawler_v1.py /NewLogs
+py .\LogCrawler\Main\LogCrawler_v2.py /NewLogs
 ```
 
 This processes eligible `log_*.jsonl` files from `LogCrawler/Logs/new_logs`. Successful files are moved to `LogCrawler/Logs/old_logs`, and reports are written to `LogCrawler/Reports`. Use `/Report` to print saved reports:
 
 ```powershell
-py .\LogCrawler\Main\LogCrawler_v1.py /Report
+py .\LogCrawler\Main\LogCrawler_v2.py /Report
 ```
 
 Running `/NewLogs` moves successfully processed files out of the input folder. Use only sanitized sample logs in this public repository; do not commit logs containing real IP addresses, usernames, tokens, or other sensitive data.
