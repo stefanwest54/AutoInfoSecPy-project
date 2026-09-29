@@ -25,8 +25,8 @@ Log Crawler/
 |   |-- new_logs/    # Pending JSONL input
 |   `-- old_logs/    # Processed input archive
 |-- Main/
-|   |-- LogAnalyzer_v1.py
-|   `-- LogCrawler_v1.py
+|   |-- LogAnalyzer_v2.py
+|   `-- LogCrawler_v2.py
 |-- Reports/         # Generated text reports
 `-- README.md
 ```
@@ -44,14 +44,14 @@ From PowerShell:
 
 ```powershell
 cd "C:\Log Crawler"
-py .\Main\LogCrawler_v1.py /NewLogs
+py .\Main\LogCrawler_v2.py /NewLogs
 ```
 
 Use `/Report` to print the saved reports in the terminal, or `/Help` to print the command summary:
 
 ```powershell
-py .\Main\LogCrawler_v1.py /Report
-py .\Main\LogCrawler_v1.py /Help
+py .\Main\LogCrawler_v2.py /Report
+py .\Main\LogCrawler_v2.py /Help
 ```
 
 If `py` is not available, use `python` in its place. Running `/NewLogs` moves successfully processed files out of `new_logs`.
@@ -61,7 +61,7 @@ If `py` is not available, use `python` in its place. Running `/NewLogs` moves su
 In Windows Task Scheduler, create a task with an action that runs the installed Python executable and passes these arguments:
 
 ```text
-"C:\Log Crawler\Main\LogCrawler_v1.py" /NewLogs
+"C:\Log Crawler\Main\LogCrawler_v2.py" /NewLogs
 ```
 
 Set the task's **Start in** directory to `C:\Log Crawler` if desired. The paths are script-relative, but setting the project directory can make task configuration and logs easier to understand. Choose a schedule that allows the log source to finish writing its files before the task starts.
@@ -105,10 +105,10 @@ Reports use the input log number in their filename. Use a unique number for each
 
 ## Analyze a Single File
 
-`LogAnalyzer_v1.py` can also be run independently. This analyzes and prints selected query results; it does not archive the file or generate the crawler's text report.
+`LogAnalyzer_v2.py` can also be run independently. This analyzes and prints selected query results; it does not archive the file or generate the crawler's text report.
 
 ```powershell
-py .\Main\LogAnalyzer_v1.py --file .\Logs\new_logs\log_1.jsonl --topips 10 --allcodes
+py .\Main\LogAnalyzer_v2.py --file .\Logs\new_logs\log_1.jsonl --topips 10 --allcodes
 ```
 
 Additional query options include `--ip`, `--timestamp`, `--action`, `--status`, `--topcodes`, and `--combo ACTION STATUS N`. Run the script with `--help` to see their arguments.
