@@ -1,4 +1,4 @@
-## Stefan West || init 9/28/2026 || LogCrawler v1.0 ##
+## Stefan West || init 9/28/2026 || LogCrawler v2.0 ##
 ## Processes pending JSONL logs, saves readable reports, and archives completed files. ##
 ## Log 1: baseline; Log 2: ddos; Log 3: idor; Log 4: password spraying; Log 5: mixed ##
 
@@ -7,7 +7,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from LogAnalyzer_v1 import LogAnalyzer
+from LogAnalyzer_v2 import LogAnalyzer
 
 
 # Anchor runtime folders to the workspace so scheduled runs work from any current directory.
