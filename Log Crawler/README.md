@@ -1,8 +1,8 @@
 ##
 Author: Stefan West
 Date: 09/28/2026
-LogAnalyzer Ver: 1.0
-LogCrawler Ver: 1.0
+LogAnalyzer Ver: 2.0
+LogCrawler Ver: 2.0
 
 # Log Crawler
 
